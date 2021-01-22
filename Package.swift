@@ -1,4 +1,4 @@
-// swift-tools-version:5.2
+// swift-tools-version:5.3
 import PackageDescription
 
 let package = Package(
@@ -11,6 +11,9 @@ let package = Package(
     ],
     dependencies: [],
     targets: [
-        .target(name: "DateToolsSwift", path: "DateToolsSwift/DateTools")
+        .target(name: "DateToolsSwift",
+                path: "DateToolsSwift/DateTools",
+                resources: [.process("DateTools.bundle")]
+        )
     ]
 )
